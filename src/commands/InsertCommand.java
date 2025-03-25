@@ -25,6 +25,10 @@ public class InsertCommand implements Commands{
      */
     @Override
     public void execute(String[] args){
+        if (args.length > 0) {
+            System.out.println("Ошибка: укажите правильно команду");
+            return;
+        }
         Long idLast = routeManager.getLastID();
         Route routeToAdd = inputNewRoute(idLast);
         routeToAdd.setId(routeToAdd.getId() + 1);
