@@ -25,10 +25,6 @@ public class InsertCommand implements Commands{
      */
     @Override
     public void execute(String[] args){
-        if (args.length < 1) {
-            System.out.println("Error: укажите ключ (ID)");
-            return;
-        }
         Long idLast = routeManager.getLastID();
         Route routeToAdd = inputNewRoute(idLast);
         routeToAdd.setId(routeToAdd.getId() + 1);
