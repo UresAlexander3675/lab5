@@ -29,6 +29,6 @@ public class InsertCommand implements Commands{
         Route routeToAdd = inputNewRoute(idLast);
         routeToAdd.setId(routeToAdd.getId() + 1);
         routeManager.addRoute(routeToAdd);
-        System.out.println("Маршрут добавлен: " + routeToAdd);
+        System.out.println("Маршрут добавлен: " + routeToAdd + ".");
     }
 }
