@@ -283,7 +283,7 @@ public class Route implements Comparable<Route>{
                 scanner.nextLine();
             }
         }
-        return new Route(idLast, toName, coordinates2, locationFrom, locationTo, distance2);
+        return new Route(idLast, name, coordinates2, locationFrom, locationTo, distance2);
     }
     @Override
     public String toString() {

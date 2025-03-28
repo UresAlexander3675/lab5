@@ -12,6 +12,5 @@ public class ExitCommand implements Commands {
     public void execute(String[] args) {
         System.out.println("Выход из программы...");
         System.exit(0);
-        System.out.println("Вы вышли из программы");
     }
 }

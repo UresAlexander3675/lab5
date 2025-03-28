@@ -1,2 +1,4 @@
-insert
 show
+info
+help
+exut

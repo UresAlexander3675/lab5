@@ -33,7 +33,7 @@ public class ExecuteScriptCommand implements Commands {
     @Override
     public void execute(String[] args) {
         if (args.length == 0) {
-            System.out.println("Ошибка: укажите имя файла.");
+            System.err.println("Error: укажите имя файла.");
             return;
         }
 
@@ -41,7 +41,7 @@ public class ExecuteScriptCommand implements Commands {
         File scriptFile = new File(fileName);
 
         if (!scriptFile.exists() || !scriptFile.isFile()) {
-            System.out.println("Ошибка: файл " + fileName + " не найден.");
+            System.err.println("Error: файл " + fileName + " не найден.");
             return;
         }
 
@@ -65,7 +65,7 @@ public class ExecuteScriptCommand implements Commands {
                 if (command != null) {
                     command.execute(commandArgs);
                 } else {
-                    System.out.println("Error: неизвестная команда '" + commandName + "'");
+                    System.err.println("Error: неизвестная команда '" + commandName + "'");
                 }
             }
 
