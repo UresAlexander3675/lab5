@@ -1,6 +1,5 @@
 package models;
 
-import exceptions.*;
 
 /**
  * Класс, представляющий координаты маршрута
@@ -13,20 +12,13 @@ public class Coordinates {
      * Конструктор Coordinates
      * @param x координата X
      * @param y координата Y
-     * @throws FieldMoreThanConstantException ошибка, когда поле больше определенной константы
      */
-    public Coordinates(int x, float y) throws FieldMoreThanConstantException {
-        if(x <= -372){
-            throw new FieldMoreThanConstantException("Coordinate x must be more, than -372");
-        }
-        if(y <= -527){
-            throw new FieldMoreThanConstantException("Coordinate y be more, than -527");
-        }
+    public Coordinates(int x, float y){
         this.x = x;
         this.y = y;
     }
 
-    public Coordinates() throws FieldMoreThanConstantException {
+    public Coordinates(){
         this.x = 0;
         this.y = 0.0f;
     }
@@ -38,16 +30,10 @@ public class Coordinates {
     public float getY(){
         return y;
     }
-    public void setX(int x) throws FieldMoreThanConstantException{
-        if(x <= -372){
-            throw new FieldMoreThanConstantException("Coordinate x must be more, than -372");
-        }
+    public void setX(int x){
         this.x = x;
     }
-    public void setY(float y) throws FieldMoreThanConstantException{
-        if(y <= -527){
-            throw new FieldMoreThanConstantException("Coordinate y must be more, than -527");
-        }
+    public void setY(float y){
         this.y = y;
     }
 

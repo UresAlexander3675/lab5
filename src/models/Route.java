@@ -1,6 +1,4 @@
 package models;
-
-import exceptions.*;
 import java.util.*;
 
 public class Route implements Comparable<Route>{
@@ -12,38 +10,14 @@ public class Route implements Comparable<Route>{
     private LocationTo to;
     private double distance;
 
-    public Route(Long id, String name, Coordinates coordinates, LocationFrom from, LocationTo to, double distance) throws NullFieldException, FieldMoreThanConstantException {
+    public Route(Long id, String name, Coordinates coordinates, LocationFrom from, LocationTo to, double distance){
         this.creationDate = new Date();
-        if(!(id == null)){
-            this.id = id;
-        } else {
-            throw new NullFieldException("ID mustn't be null");
-        }
-        if(!(coordinates == null)){
-            this.coordinates = coordinates;
-        } else {
-            throw new FieldMoreThanConstantException("Coordinates mustn't be null");
-        }
-        if(!(name == null)){
-            this.name = name;
-        } else {
-            throw new NullFieldException("Name mustn't be null");
-        }
-        if(!(from == null)){
-            this.from = from;
-        } else {
-            throw new NullFieldException("Location from mustn't be null");
-        }
-        if(!(to == null)){
-            this.to = to;
-        } else {
-            throw new NullFieldException("Location to mustn't be null");
-        }
-        if(distance > 1){
-            this.distance = distance;
-        } else {
-            throw new FieldMoreThanConstantException("Distance must be more, than 1");
-        }
+        this.id = id;
+        this.coordinates = coordinates;
+        this.name = name;
+        this.from = from;
+        this.to = to;
+        this.distance = distance;
     }
 
     public Route(){
@@ -78,52 +52,28 @@ public class Route implements Comparable<Route>{
         return coordinates;
     }
 
-    public void setName(String name) throws NullFieldException {
-        if(!(name == null)){
-            this.name = name;
-        } else {
-            throw new NullFieldException("Name mustn't be null");
-        }
+    public void setName(String name){
+        this.name = name;
     }
 
-    public void setDistance(double distance) throws FieldMoreThanConstantException {
-        if(distance > 1){
-            this.distance = distance;
-        } else {
-            throw new FieldMoreThanConstantException("Distance must be more, than 1");
-        }
+    public void setDistance(double distance) {
+        this.distance = distance;
     }
 
-    public void setTo(LocationTo to) throws NullFieldException{
-        if(!(to == null)){
-            this.to = to;
-        } else {
-            throw new NullFieldException("Location to mustn't be null");
-        }
+    public void setTo(LocationTo to){
+        this.to = to;
     }
 
-    public void setFrom(LocationFrom from) throws NullFieldException{
-        if(!(from == null)){
-            this.from = from;
-        } else {
-            throw new NullFieldException("Location from mustn't be null");
-        }
+    public void setFrom(LocationFrom from){
+        this.from = from;
     }
 
-    public void setId(Long id) throws NullFieldException{
-        if(!(id == null)){
-            this.id = id;
-        } else {
-            throw new NullFieldException("ID mustn't be null");
-        }
+    public void setId(Long id){
+        this.id = id;
     }
 
     public void setCoordinates(Coordinates coordinates) {
-        if(!(coordinates == null)){
-            this.coordinates = coordinates;
-        } else {
-            throw new FieldMoreThanConstantException("Coordinates mustn't be null");
-        }
+        this.coordinates = coordinates;
     }
 
     @Override
@@ -265,7 +215,7 @@ public class Route implements Comparable<Route>{
         LocationTo locationTo = null;
         try {
             locationTo = new LocationTo(toXcoordinate, toYcoordinate, toZcoordinate, toName);
-        } catch (FieldMoreThanConstantException | NullFieldException e) {
+        } catch (NumberFormatException e) {
             System.err.println("Ошибка при создании LocationTo: " + e.getMessage());
         }
         double distance2 ;

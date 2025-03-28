@@ -1,8 +1,5 @@
 package models;
 
-import exceptions.FieldMoreThanConstantException;
-import exceptions.NullFieldException;
-
 /**
  * Класс, представляющий конечную точку маршрута
  */
@@ -16,29 +13,17 @@ public class LocationFrom {
      * @param x координата X
      * @param y координата Y
      * @param name название точки маршрута
-     * @throws FieldMoreThanConstantException ошибка, когда поле больше определенной константы
-     * @throws NullFieldException ошибка, когда поле - null
      */
-    public LocationFrom(double x, Integer y, String name) throws FieldMoreThanConstantException, NullFieldException {
+    public LocationFrom(double x, Integer y, String name){
         this.x = x;
-        if(!(y == null)){
-            this.y = y;
-        } else {
-            throw new NullFieldException("Coordinate y mustn't be null");
-        }
-        if(name.length() <= 956){
-            this.name = name;
-        } else {
-            throw new FieldMoreThanConstantException("Name's length must be less than 956");
-        }
+        this.y = y;
+        this.name = name;
     }
 
     /**
      * Конструктор LocationFrom по умолчанию
-     * @throws FieldMoreThanConstantException ошибка, когда поле больше определенной константы
-     * @throws NullFieldException ошибка, когда поле - null
      */
-    public LocationFrom() throws FieldMoreThanConstantException, NullFieldException {
+    public LocationFrom(){
         this.x = 0.0;
         this.y = 0;
         this.name = "default";
@@ -57,19 +42,11 @@ public class LocationFrom {
     public void setX(int x){
         this.x = x;
     }
-    public void setY(int x) throws NullFieldException{
-        if(!(y == null)){
-            this.y = y;
-        } else {
-            throw new NullFieldException("Coordinate y mustn't be null");
-        }
+    public void setY(int y){
+        this.y = y;
     }
-    public void setName(String name) throws FieldMoreThanConstantException{
-        if(name.length() <= 956){
-            this.name = name;
-        } else {
-            throw new FieldMoreThanConstantException("Name's length must be less than 956");
-        }
+    public void setName(String name){
+        this.name = name;
     }
 
     @Override
