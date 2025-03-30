@@ -21,9 +21,7 @@ public class Main {
 
         FileManager fileManager = new FileManager("data.xml");
         RouteManager routeManager = new RouteManager(fileManager);
-
         routeManager.load();
-
         Map<String, Commands> commands = new HashMap<>();
         commands.put("help", new HelpCommand());
         commands.put("show", new ShowCommand(routeManager));
@@ -78,7 +76,7 @@ public class Main {
             }
         }
 
-        fileManager.save(routeManager.getLinkedHashMap());
-        System.out.println("Данные сохранены. Завершение работы.");
+//        fileManager.save(routeManager.getLinkedHashMap());
+//        System.out.println("Данные сохранены. Завершение работы.");
     }
 }

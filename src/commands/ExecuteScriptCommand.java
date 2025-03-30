@@ -68,9 +68,6 @@ public class ExecuteScriptCommand implements Commands {
                     System.err.println("Error: неизвестная команда '" + commandName + "'");
                 }
             }
-
-            System.out.println("Выполнение скрипта завершено.");
-
         } catch (FileNotFoundException e) {
             System.err.println("Ошибка: не удалось открыть файл '" + fileName + "'.");
         }
