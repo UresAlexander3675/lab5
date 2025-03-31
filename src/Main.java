@@ -75,8 +75,5 @@ public class Main {
                 System.out.println("Неизвестная команда. Введите 'help' для списка команд.");
             }
         }
-
-//        fileManager.save(routeManager.getLinkedHashMap());
-//        System.out.println("Данные сохранены. Завершение работы.");
     }
 }
