@@ -33,7 +33,6 @@ public class FileManager {
      * Загружает коллекцию маршрутов из XML-файла.
      * @return коллеция маршрутов
      */
-    @SuppressWarnings("unchecked")
     public LinkedHashMap<Long, Route> load() {
         if (!Files.exists(Paths.get(filename))) {
             System.out.println("Файл не найден, создаём новый.");
