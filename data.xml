@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="22.0.2" class="java.beans.XMLDecoder">
+ <object class="java.util.LinkedHashMap">
+  <void method="put">
+   <long>1</long>
+   <object class="models.Route">
+    <void property="coordinates">
+     <object class="models.Coordinates">
+      <void property="x">
+       <int>55432</int>
+      </void>
+      <void property="y">
+       <float>5.0</float>
+      </void>
+     </object>
+    </void>
+    <void property="distance">
+     <double>3456.0</double>
+    </void>
+    <void property="from">
+     <object class="models.LocationFrom">
+      <void property="name">
+       <string>543</string>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <long>1</long>
+    </void>
+    <void property="name">
+     <string>1245</string>
+    </void>
+    <void property="to">
+     <object class="models.LocationTo"/>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <long>2</long>
+   <object class="models.Route">
+    <void property="coordinates">
+     <object class="models.Coordinates">
+      <void property="x">
+       <int>2344</int>
+      </void>
+      <void property="y">
+       <float>124.0</float>
+      </void>
+     </object>
+    </void>
+    <void property="distance">
+     <double>245.0</double>
+    </void>
+    <void property="from">
+     <object class="models.LocationFrom">
+      <void property="name">
+       <string>3445</string>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <long>2</long>
+    </void>
+    <void property="name">
+     <string>1234</string>
+    </void>
+    <void property="to">
+     <object class="models.LocationTo"/>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <long>3</long>
+   <object class="models.Route">
+    <void property="coordinates">
+     <object class="models.Coordinates">
+      <void property="x">
+       <int>432</int>
+      </void>
+      <void property="y">
+       <float>123.0</float>
+      </void>
+     </object>
+    </void>
+    <void property="distance">
+     <double>1233.0</double>
+    </void>
+    <void property="from">
+     <object class="models.LocationFrom">
+      <void property="name">
+       <string>5432</string>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <long>3</long>
+    </void>
+    <void property="name">
+     <string>1234</string>
+    </void>
+    <void property="to">
+     <object class="models.LocationTo"/>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <long>4</long>
+   <object class="models.Route">
+    <void property="coordinates">
+     <object class="models.Coordinates">
+      <void property="x">
+       <int>1234</int>
+      </void>
+      <void property="y">
+       <float>1234.0</float>
+      </void>
+     </object>
+    </void>
+    <void property="distance">
+     <double>234.0</double>
+    </void>
+    <void property="from">
+     <object class="models.LocationFrom">
+      <void property="name">
+       <string>1234</string>
+      </void>
+     </object>
+    </void>
+    <void property="id">
+     <long>4</long>
+    </void>
+    <void property="name">
+     <string>123</string>
+    </void>
+    <void property="to">
+     <object class="models.LocationTo"/>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
