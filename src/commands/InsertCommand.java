@@ -50,7 +50,6 @@ public class InsertCommand implements Commands{
                 routeManager.addRoute(routeToAdd);
             } catch (Exception e){
                 System.err.println("Скрипт написан неверно");
-                return;
             }
         } else {
             Long idLast = routeManager.getLastID();
